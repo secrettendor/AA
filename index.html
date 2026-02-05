@@ -1,204 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>VOTE FOR ANDRES</title>
-<style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial;background:#f6e3c8}
-h3{text-align:center;margin:10px 0;font-weight:bold;color:#333}
-.button{display:inline-block;margin:10px;padding:12px 20px;background:#222;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;padding:10px}
-iframe{width:100%;height:360px;border-radius:14px;border:1px solid #e0caa5;background:#fff}
+  <meta charset="UTF-8" />
+  <title>AHSDRES Voting Grid</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-/* Watermark */
-#wm{position:fixed;inset:0;pointer-events:none;z-index:99998;font-size:13px;opacity:.18;display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(6,1fr);transform:rotate(-15deg)}
-#wm div{display:flex;align-items:center;justify-content:center;user-select:none}
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-/* Floating Andres Muhlach vote card */
-#vote-card{
-  position:fixed;
-  top:10px;
-  left:50%;
-  transform:translateX(-50%);
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  background: linear-gradient(135deg, #5dc1f5, #f5a85d);
-  border-radius:20px;
-  padding:20px;
-  color:#fff;
-  text-align:center;
-  box-shadow:0 4px 15px rgba(0,0,0,0.2);
-  z-index:10001;
-  cursor:pointer;
-}
-#vote-card img{
-  width:120px;
-  height:120px;
-  border-radius:50%;
-  border:4px solid #fff;
-  object-fit:cover;
-  margin-bottom:10px;
-  box-shadow:0 0 25px rgba(0,255,120,.7);
-  animation:pulse 2s infinite;
-}
-@keyframes pulse{
-  0%{transform:scale(1)}
-  50%{transform:scale(1.06)}
-  100%{transform:scale(1)}
-}
-#vote-card h2{
-  margin:5px 0;
-  font-size:1.5rem;
-  font-weight:bold;
-}
-#vote-card p{
-  margin:5px 0;
-  font-size:1rem;
-  font-weight:bold;
-  letter-spacing:1px;
-  text-transform:uppercase;
-}
-</style>
+    body {
+      margin: 0;
+      background: #0f0f0f;
+      font-family: Arial, sans-serif;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .frame-wrapper {
+      position: relative;
+      width: 100%;
+      height: 480px;
+      background: #000;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .watermark {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: bold;
+      color: rgba(255, 255, 255, 0.15);
+      pointer-events: none;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transform: rotate(-20deg);
+      user-select: none;
+    }
+  </style>
 </head>
+
 <body>
+  <div class="grid">
 
-<h3>VOTE FOR ASHDRES</h3>
-<a href="./muhlach.user.js" class="button">INSTALL USERSCRIPT</a>
+    <!-- 20 iframes -->
+    <div class="frame-wrapper">
+      <iframe src="https://vote-kappa-seven.vercel.app/"></iframe>
+      <div class="watermark">AHSDRES VOTING TEAM</div>
+    </div>
 
-<!-- ANDRES MUHLACH VOTE CARD -->
-<div id="vote-card" onclick="window.open('https://vote-kappa-seven.vercel.app/','_blank')">
-  <img src="https://drive.google.com/uc?export=view&id=1I3GPRJTxJbmuaHG6Zf-szsBZaW0FWKBP" alt="Andres Bubble Head">
-  <h2>ANDRES</h2>
-  <p>🚀 WATCH ANDRES CLIMB 🚀</p>
-</div>
+    <div class="frame-wrapper">
+      <iframe src="https://vote-kappa-seven.vercel.app/"></iframe>
+      <div class="watermark">AHSDRES VOTING TEAM</div>
+    </div>
 
-<!-- CONTENT -->
-<div class="grid" id="content">
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>VOTE FOR ASHDRES • VPCA</title>
-<style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial;background:#f6e3c8}
-h3{text-align:center;margin:10px 0;font-weight:bold;color:#333}
-.button{display:inline-block;margin:10px;padding:12px 20px;background:#222;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold;cursor:pointer}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;padding:10px}
-iframe{width:100%;height:360px;border-radius:14px;border:1px solid #e0caa5;background:#fff}
+    <div class="frame-wrapper">
+      <iframe src="https://vote-kappa-seven.vercel.app/"></iframe>
+      <div class="watermark">AHSDRES VOTING TEAM</div>
+    </div>
 
-/* WATERMARK */
-#wm{
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  z-index:9999;
-  font-size:13px;
-  opacity:.18;
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  grid-template-rows:repeat(6,1fr);
-  transform:rotate(-15deg);
-}
-#wm div{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  user-select:none;
-}
-</style>
-</head>
-<body>
+    <div class="frame-wrapper">
+      <iframe src="https://vote-kappa-seven.vercel.app/"></iframe>
+      <div class="watermark">AHSDRES VOTING TEAM</div>
+    </div>
 
-<h3>VOTE FOR ASHDRES • VPCA</h3>
+    <div class="frame-wrapper">
+      <iframe src="https://vote-kappa-seven.vercel.app/"></iframe>
+      <div class="watermark">AHSDRES VOTING TEAM</div>
+    </div>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>VOTE FOR ASHDRES • VPCA</title>
-<style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial;background:#f6e3c8}
-h3{text-align:center;margin:10px 0;font-weight:bold;color:#333}
-.button{display:inline-block;margin:10px;padding:12px 20px;background:#222;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold;cursor:pointer}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;padding:10px}
-iframe{width:100%;height:360px;border-radius:14px;border:1px solid #e0caa5;background:#fff}
+    <div class="frame-wrapper">
+      <iframe src="https://vote-kappa-seven.vercel.app/"></iframe>
+      <div class="watermark">AHSDRES VOTING TEAM</div>
+    </div>
 
-/* WATERMARK */
-#wm{
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  z-index:9999;
-  font-size:13px;
-  opacity:.18;
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  grid-template-rows:repeat(6,1fr);
-  transform:rotate(-15deg);
-}
-#wm div{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  user-select:none;
-}
-</style>
-</head>
-<body>
+    <div class="frame-wrapper">
+      <iframe src="https://vote-kappa-seven.vercel.app/"></iframe>
+      <div class="watermark">AHSDRES VOTING TEAM</div>
+    </div>
 
-<h3>VOTE FOR ASHDRES • VPCA</h3>
+    <div class="frame-wrapper">
+      <iframe src="https://vote-kappa-seven.vercel.app/"></iframe>
+      <div class="watermark">AHSDRES VOTING TEAM</div>
+    </div>
 
-<div style="text-align:center">
-  <a href="./muhlach.user.js" class="button">INSTALL USERSCRIPT</a>
-  <button class="button" onclick="openTenTabs()">OPEN 10 VPCA TABS</button>
-</div>
+    <div class="frame-wrapper">
+      <iframe src="https://vote-kappa-seven.vercel.app/"></iframe>
+      <div class="watermark">AHSDRES VOTING TEAM</div>
+    </div>
 
-<!-- CONTENT -->
-<div class="grid">
-  <iframe src="https://vote-kappa-seven.vercel.app/" loading="lazy"></iframe>
-  <iframe src="https://vote-kappa-seven.vercel.app/" loading="lazy"></iframe>
-  <iframe src="https://vote-kappa-seven.vercel.app/" loading="lazy"></iframe>
-  <iframe src="https://vote-kappa-seven.vercel.app/" loading="lazy"></iframe>
-  <iframe src="https://vote-kappa-seven.vercel.app/" loading="lazy"></iframe>
-  <iframe src="https://vote-kappa-seven.vercel.app/" loading="lazy"></iframe>
-  <iframe src="https://vote-kappa-seven.vercel.app/" loading="lazy"></iframe>
-  <iframe src="https://vote-kappa-seven.vercel.app/" loading="lazy"></iframe>
-  <iframe src="https://vote-kappa-seven.vercel.app/" loading="lazy"></iframe>
-  <iframe src="https://vote-kappa-seven.vercel.app/" loading="lazy"></iframe>
-</div>
+    <div class="frame-wrapper">
+      <iframe src="https://vote-kappa-seven.vercel.app/"></iframe>
+      <div class="watermark">AHSDRES VOTING TEAM</div>
+    </div>
 
-<!-- WATERMARK -->
-<div id="wm"></div>
+    <div class="frame-wrapper">
+      <iframe src="https://vote-kappa-seven.vercel.app/"></iframe>
+      <div class="watermark">AHSDRES VOTING TEAM</div>
+    </div>
 
-<script>
-// WATERMARK
-(function(){
-  const wm=document.getElementById("wm");
-  const stamp="ASHDRES VOTING TEAM";
-  wm.innerHTML="";
-  for(let i=0;i<24;i++){
-    const d=document.createElement("div");
-    d.textContent=stamp;
-    wm.appendChild(d);
-  }
-})();
+    <div class="frame-wrapper">
+      <iframe src="https://vote-kappa-seven.vercel.app/"></iframe>
+      <div class="watermark">AHSDRES VOTING TEAM</div>
+    </div>
 
-// OPEN 10 TABS FUNCTION
-function openTenTabs(){
-  const url="https://vote-kappa-seven.vercel.app/";
-  for(let i=0;i<10;i++){
-    window.open(url,"_blank");
-  }
-}
-</script>
+    <div class="frame-wrapper">
+      <iframe src="https://vote-kappa-seven.vercel.app/"></iframe>
+      <div class="watermark">AHSDRES VOTING TEAM</div>
+    </div>
 
+    <div class="frame-wrapper">
+      <iframe src="https://vote-kappa-seven.vercel.app/"></iframe>
+      <div class="watermark">AHSDRES VOTING TEAM</div>
+    </div>
+
+    <div class="frame-wrapper">
+      <iframe src="https://vote-kappa-seven.vercel.app/"></iframe>
+      <div class="watermark">AHSDRES VOTING TEAM</div>
+    </div>
+
+    <div class="frame-wrapper">
+      <iframe src="https://vote-kappa-seven.vercel.app/"></iframe>
+      <div class="watermark">AHSDRES VOTING TEAM</div>
+    </div>
+
+    <div class="frame-wrapper">
+      <iframe src="https://vote-kappa-seven.vercel.app/"></iframe>
+      <div class="watermark">AHSDRES VOTING TEAM</div>
+    </div>
+
+    <div class="frame-wrapper">
+      <iframe src="https://vote-kappa-seven.vercel.app/"></iframe>
+      <div class="watermark">AHSDRES VOTING TEAM</div>
+    </div>
+
+    <div class="frame-wrapper">
+      <iframe src="https://vote-kappa-seven.vercel.app/"></iframe>
+      <div class="watermark">AHSDRES VOTING TEAM</div>
+    </div>
+
+    <div class="frame-wrapper">
+      <iframe src="https://vote-kappa-seven.vercel.app/"></iframe>
+      <div class="watermark">AHSDRES VOTING TEAM</div>
+    </div>
+
+  </div>
 </body>
 </html>
