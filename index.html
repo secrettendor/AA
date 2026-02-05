@@ -14,6 +14,24 @@
       margin: 0;
       background: #0f0f0f;
       font-family: Arial, sans-serif;
+      color: #fff;
+    }
+
+    .instructions {
+      background: #1a1a1a;
+      padding: 15px 20px;
+      margin: 10px;
+      border-radius: 8px;
+      line-height: 1.5;
+      font-size: 16px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .instructions h2 {
+      margin-top: 0;
+      color: #ffd700;
     }
 
     .grid {
@@ -21,6 +39,8 @@
       grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
       gap: 10px;
       padding: 10px;
+      max-width: 1200px;
+      margin: 0 auto 20px;
     }
 
     .frame-wrapper {
@@ -57,9 +77,26 @@
 </head>
 
 <body>
-  <div class="grid">
 
-    <!-- 20 iframes -->
+  <!-- Instructions Box -->
+  <div class="instructions">
+    <h2>📌 Voting Instructions</h2>
+    <ol>
+      <li>Click <strong>all nominees</strong> under <em>Face of the Year</em> and <em>Sexiest of the Year</em>.</li>
+      <li>Scroll down and select all categories under <strong>Face of the Year – Male (Adult)</strong>.</li>
+      <li>Tap all the <strong>star buttons</strong> for your chosen nominee until fully highlighted ⭐⭐⭐⭐⭐.</li>
+      <li>Once done, <strong>refresh the same tab</strong> to reset and repeat the process.</li>
+    </ol>
+  </div>
+
+  <!-- Grid of 20 iframes -->
+  <div class="grid">
+    <!-- Repeat 20 times -->
+    <div class="frame-wrapper">
+      <iframe src="https://vote-kappa-seven.vercel.app/"></iframe>
+      <div class="watermark">AHSDRES VOTING TEAM</div>
+    </div>
+
     <div class="frame-wrapper">
       <iframe src="https://vote-kappa-seven.vercel.app/"></iframe>
       <div class="watermark">AHSDRES VOTING TEAM</div>
