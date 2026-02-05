@@ -78,6 +78,52 @@ iframe{width:100%;height:360px;border-radius:14px;border:1px solid #e0caa5;backg
 
 <!-- CONTENT -->
 <div class="grid" id="content">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>VOTE FOR ASHDRES • VPCA</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial;background:#f6e3c8}
+h3{text-align:center;margin:10px 0;font-weight:bold;color:#333}
+.button{display:inline-block;margin:10px;padding:12px 20px;background:#222;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold;cursor:pointer}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;padding:10px}
+iframe{width:100%;height:360px;border-radius:14px;border:1px solid #e0caa5;background:#fff}
+
+/* WATERMARK */
+#wm{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:9999;
+  font-size:13px;
+  opacity:.18;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  grid-template-rows:repeat(6,1fr);
+  transform:rotate(-15deg);
+}
+#wm div{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  user-select:none;
+}
+</style>
+</head>
+<body>
+
+<h3>VOTE FOR ASHDRES • VPCA</h3>
+
+<div style="text-align:center">
+  <a href="./muhlach.user.js" class="button">INSTALL USERSCRIPT</a>
+  <button class="button" onclick="openTenTabs()">OPEN 10 VPCA TABS</button>
+</div>
+
+<!-- CONTENT -->
+<div class="grid">
   <iframe src="https://vote-kappa-seven.vercel.app/" loading="lazy"></iframe>
   <iframe src="https://vote-kappa-seven.vercel.app/" loading="lazy"></iframe>
   <iframe src="https://vote-kappa-seven.vercel.app/" loading="lazy"></iframe>
@@ -90,36 +136,29 @@ iframe{width:100%;height:360px;border-radius:14px;border:1px solid #e0caa5;backg
   <iframe src="https://vote-kappa-seven.vercel.app/" loading="lazy"></iframe>
 </div>
 
+<!-- WATERMARK -->
 <div id="wm"></div>
-<div id="shield"></div>
 
 <script>
-// ------------------ SHOW WATERMARK ------------------
+// WATERMARK
 (function(){
-  const wm=document.getElementById("wm"); wm.innerHTML="";
+  const wm=document.getElementById("wm");
   const stamp="ASHDRES VOTING TEAM";
+  wm.innerHTML="";
   for(let i=0;i<24;i++){
-    let d=document.createElement("div");
+    const d=document.createElement("div");
     d.textContent=stamp;
     wm.appendChild(d);
   }
-  setInterval(()=>wm.style.transform=`rotate(${Math.random()*10-5}deg)`,3000);
 })();
 
-// ------------------ BLACKOUT / BLOCKER ------------------
-(()=>{
-  const s=document.getElementById("shield"),b=v=>s.style.opacity=v?"1":"0";
-  document.addEventListener("visibilitychange",()=>b(document.hidden));
-  window.addEventListener("blur",()=>b(1));
-  window.addEventListener("focus",()=>b(0));
-  document.addEventListener("contextmenu",e=>e.preventDefault());
-  document.addEventListener("keydown",e=>{
-    if(e.key==="F12"||e.ctrlKey&&e.shiftKey&&e.key==="I"){
-      e.preventDefault(); b(1);
-    }
-  });
-  setInterval(()=>b(outerWidth-innerWidth>160||outerHeight-innerHeight>160),500);
-})();
+// OPEN 10 TABS FUNCTION
+function openTenTabs(){
+  const url="https://vote-kappa-seven.vercel.app/";
+  for(let i=0;i<10;i++){
+    window.open(url,"_blank");
+  }
+}
 </script>
 
 </body>
